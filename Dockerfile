@@ -10,6 +10,7 @@ ENV JAVA_HOME=/usr/lib/jvm/default-java
 WORKDIR /hadoop-3.3.1
 RUN mkdir input
 RUN cp etc/hadoop/*.xml input
+RUN mkdir teste
 CMD bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.1.jar grep input output 'dfs[a-z.]+'
 
 #CMD /bin/bash
